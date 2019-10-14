@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t alberthodur/docker-react -f Docerfile.dev .
+  - docker build -t alberthodur/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true alberthodur/docker-react npm run test
